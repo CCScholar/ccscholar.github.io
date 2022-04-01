@@ -1,0 +1,22 @@
+a{
+	color: green;
+}
+
+a:hover{
+	color: #c0792b;
+}
+
+a:active{
+	color: #c0392b;
+}
+
+.c{
+	color: #c0392b;
+}
+
+ul{
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	justify-content: center;
+}

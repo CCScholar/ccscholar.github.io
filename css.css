@@ -1,0 +1,11 @@
+a:hover {
+  color: #c0392b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
