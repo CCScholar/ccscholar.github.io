@@ -1,6 +1,11 @@
 var l=[
 	["name","writer","teacher","href"],
-	["圆周角=1/2圆心角","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-03-31"]
+	["圆周角=1/2圆心角","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-03-31"],
+	["圆: 相交弦定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-01.1"],
+	["圆: 割线定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-01.2"],
+	["圆: 垂径定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-01.3"],
+	["圆: 弦切角定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-01.4"],
+	
 ];
 
 function search(){
