@@ -12,7 +12,7 @@ var l=[
 	["圆: 相交弦定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.5"],
 	["圆: 割线定理逆定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.4"],
 	["圆: 割线定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.3"],
-	["圆: 托罗密定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.1"],
+	["圆: 托勒密定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.1"],
 	
 ];
 
