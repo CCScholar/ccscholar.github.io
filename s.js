@@ -6,6 +6,14 @@ var l=[
 	["圆: 垂径定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-01.3"],
 	["圆: 弦切角定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-01.4"],
 	
+	["圆: 圆幂定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.2"],
+	["圆: 切割线定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.7"],
+	["圆: 相交弦定理逆定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.6"],
+	["圆: 相交弦定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.5"],
+	["圆: 割线定理逆定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.4"],
+	["圆: 割线定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.3"],
+	["圆: 托罗密定理","T.M.D.","T.M.D.","https://cucumbercan.github.io/math/html/main.html?&2022-04-02.1"],
+	
 ];
 
 function search(){
