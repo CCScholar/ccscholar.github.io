@@ -90,6 +90,12 @@ function search() {
 		while(tmp3.indexOf('.')!=-1){
 			tmp3=tmp3.replace('.','')
 		}
+		while(WRI.indexOf('.')!=-1){
+			WRI=WRI.replace('.','')
+		}
+		while(TEA.indexOf('.')!=-1){
+			TEA=TEA.replace('.','')
+		}
 		
 		console.log(l[i][1])
 		if (tmp1.indexOf(NAME) != -1 && tmp2.indexOf(WRI) != -1 && tmp3
