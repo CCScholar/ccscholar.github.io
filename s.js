@@ -68,11 +68,11 @@ function search() {
 		return newsid;
 	}
 	number = 1;
-	var NAME = decodeURI(Get());
+	var NAME = decodeURI(Get()).toLowerCase();
 	number = 2;
-	var WRI = decodeURI(Get());
+	var WRI = decodeURI(Get()).toLowerCase();
 	number = 3;
-	var TEA = decodeURI(Get());
+	var TEA = decodeURI(Get()).toLowerCase();
 
 
 
