@@ -68,11 +68,11 @@ function search() {
 		return newsid;
 	}
 	number = 1;
-	var NAME = decodeURI(Get()).toLowerCase();
+	var NAME = decodeURI(Get());
 	number = 2;
-	var WRI = decodeURI(Get()).toLowerCase();
+	var WRI = decodeURI(Get());
 	number = 3;
-	var TEA = decodeURI(Get()).toLowerCase();
+	var TEA = decodeURI(Get());
 
 
 
@@ -131,4 +131,31 @@ function search() {
 	}
 	
 	document.getElementById("D90").innerHTML = s;
+	
+	//Semantic:
+	var HttpClient = function() {
+		this.get = function(aUrl, aCallback) {
+		    var anHttpRequest = new XMLHttpRequest();
+		    anHttpRequest.onreadystatechange = function() { 
+		        if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+		            aCallback(anHttpRequest.responseText);
+		    }
+		
+		    anHttpRequest.open( "GET", aUrl, true );            
+		    anHttpRequest.send( null );
+		}
+	}
+	var json_sem={"aaa":123};
+	var client = new HttpClient();
+	client.get("https://api.semanticscholar.org/graph/v1/paper/search?query="+NAME, function(response) {
+		// do something with response
+		json_sem=JSON.parse(response);
+		var s_sem="";
+		for(var i=0;i<10;i++){
+			// s_sem+=json_sem.data[i].title+"\n"
+			s_sem+="<div style=\"margin:1vw\"><h2><a href=\"https://api.semanticscholar.org/"+json_sem.data[i].paperId+"\">"+json_sem.data[i].title+"</a></h2><span><a href='https://www.connectedpapers.com/main/"+json_sem.data[i].paperId+"'>Conntected Papers</a></span><br>-----------------------------------------------</div>\n";
+		}
+	document.getElementById("D-Semantic").innerHTML=s_sem;
+	});
+	
 }
