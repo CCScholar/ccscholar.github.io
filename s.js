@@ -54,6 +54,10 @@ function similar(s, t, f) {
 	return res.toFixed(f)
 }
 
+var NAME;
+var WRI;
+var TEA;
+
 function search() {
 	var number = 1;
 
@@ -68,11 +72,11 @@ function search() {
 		return newsid;
 	}
 	number = 1;
-	var NAME = decodeURI(Get());
+	NAME = decodeURI(Get());
 	number = 2;
-	var WRI = decodeURI(Get());
+	WRI = decodeURI(Get());
 	number = 3;
-	var TEA = decodeURI(Get());
+	TEA = decodeURI(Get());
 
 
 
@@ -113,7 +117,7 @@ function search() {
 		var tc = lst[i][2];
 		var hf = lst[i][3];
 		//s+="<input type=\"button\" value=\"aaa\"/>"
-		s += "<div style=\"margin:1vw\"><h2><a href=\"" + hf + "\">" + name + "</a></h2><span>作者：</span>" + wt +
+		s += "<div style=\"margin:1vw\"><h2><a href=\"javascript:open('" + hf + "')\">" + name + "</a></h2><span>作者：</span>" + wt +
 			"<br><span>指导教师：</span>" + tc + "</div><br>";
 	}
 
@@ -126,25 +130,13 @@ function search() {
 		var tc = ntp[i][2];
 		var hf = ntp[i][3];
 		//s+="<input type=\"button\" value=\"aaa\"/>"
-		s += "<div style=\"margin:1vw\"><h2><a href=\"" + hf + "\">" + name + "</a></h2><span>作者：</span>" + wt +
+		s += "<div style=\"margin:1vw\"><h2><a href=\"javascript:open('" + hf + "')\">" + name + "</a></h2><span>作者：</span>" + wt +
 			"<br><span>指导教师：</span>" + tc + "</div><br>";
 	}
 	
 	document.getElementById("D90").innerHTML = s;
 	
 	//Semantic:
-	var HttpClient = function() {
-		this.get = function(aUrl, aCallback) {
-		    var anHttpRequest = new XMLHttpRequest();
-		    anHttpRequest.onreadystatechange = function() { 
-		        if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-		            aCallback(anHttpRequest.responseText);
-		    }
-		
-		    anHttpRequest.open( "GET", aUrl, true );            
-		    anHttpRequest.send( null );
-		}
-	}
 	var json_sem={"aaa":123};
 	var client = new HttpClient();
 	client.get("https://api.semanticscholar.org/graph/v1/paper/search?query="+NAME, function(response) {
@@ -157,4 +149,37 @@ function search() {
 		}
 	});
 	
+}
+
+
+function translate(){
+	var str=NAME;
+	var client = new HttpClient();
+	client.get("https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=auto&tl=en&q="+encodeURI(str),function(response){
+		window.location.href="s.html?&"+eval(response)[0][0][0]+"&"+WRI+"&"+TEA;
+	})
+	
+}
+function trans(){
+	var str=NAME;
+	var client = new HttpClient();
+	client.get("https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=auto&tl=zh-cn&q="+encodeURI(str),function(response){
+		window.location.href="s.html?&"+eval(response)[0][0][0]+"&"+WRI+"&"+TEA;
+	})
+	
+}
+
+
+
+var HttpClient = function() {
+	this.get = function(aUrl, aCallback) {
+		var anHttpRequest = new XMLHttpRequest();
+		anHttpRequest.onreadystatechange = function() { 
+		    if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+		        aCallback(anHttpRequest.responseText);
+		}
+		
+		anHttpRequest.open( "GET", aUrl, true );            
+		anHttpRequest.send( null );
+	}
 }
