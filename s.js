@@ -153,9 +153,8 @@ function search() {
 		var s_sem="";
 		for(var i=0;i<10;i++){
 			// s_sem+=json_sem.data[i].title+"\n"
-			s_sem+="<div style=\"margin:1vw\"><h2><a href=\"https://api.semanticscholar.org/"+json_sem.data[i].paperId+"\">"+json_sem.data[i].title+"</a></h2><span><a href='https://www.connectedpapers.com/main/"+json_sem.data[i].paperId+"'>Conntected Papers</a></span><br>-----------------------------------------------</div>\n";
+			document.getElementById("D-Semantic").innerHTML=document.getElementById("D-Semantic").innerHTML+"<div style=\"margin:1vw\"><h2><a href=\"https://api.semanticscholar.org/"+json_sem.data[i].paperId+"\">"+json_sem.data[i].title+"</a></h2><span><a href='https://www.connectedpapers.com/main/"+json_sem.data[i].paperId+"'>Conntected Papers</a></span><br>-----------------------------------------------</div>\n";
 		}
-	document.getElementById("D-Semantic").innerHTML=s_sem;
 	});
 	
 }
